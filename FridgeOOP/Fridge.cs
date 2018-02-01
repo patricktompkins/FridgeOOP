@@ -62,7 +62,7 @@ namespace FridgeOOP
         
         public void DispenseWater()
         {
-            if (dispenserType is == "basic water dispenser")
+            if (dispenserType == "basic water dispenser")
             {
                 Console.WriteLine("Here's some lukewarm water!");
             }
@@ -74,8 +74,65 @@ namespace FridgeOOP
 
             else
             {
-                Console.WriteLine("What are you going to do when Hulk Hogan and the luckwarm water comes from you?");
+                Console.WriteLine("What are you going to do when Hulk Hogan and his luckwarm water comes from you?");
+            }
+
+
+        }
+        public string ChangeBulbs()
+        {
+            if (bulbsWork == false)
+            {
+                bulbsWork = true;
+                return "The bulbs have been changed.";
+            }
+            else
+            {
+                return "The bulbs don't have to be changed.";
+            }
+
+        }
+
+        public void RemoveFood(int foodRemoved)
+        {
+            foodAmount -= foodRemoved;
+        }
+
+        public string CheckSupplies()
+        {
+            if (foodAmount <= 80)
+            {
+                return "fully stocked";
+            }
+            else if (foodAmount > 40)
+            {
+                return "getting low";
+            }
+            else
+            {
+                return "time to grocery shop";
             }
         }
+        public string Clean()
+        {
+            if (isClean == false)
+            {
+                isClean = true;
+                return "I cleaned the firdge";
+            }
+            else
+            {
+                return "The fridge is already clean.";
+            }
+        }
+
+
+        //Add CommentCollapse
+
+
+
+
+
+
     }
 }
